@@ -1,0 +1,51 @@
+live_config_reload = true
+import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+[env]
+TERM = "xterm-256color"
+
+[bell]
+animation = "EaseOutExpo"
+duration = 0
+
+
+[shell]
+program = '/usr/bin/zsh'
+args = ['-l', '-c', 'tmux attach || tmux']
+
+[window]
+decorations = "full"
+dynamic_padding = false
+opacity = 1
+
+[window.padding]
+x = 10
+y = 0
+
+
+[font]
+size = 13.0
+
+[mouse]
+hide_when_typing = true
+
+[[mouse.bindings]]
+action = "PasteSelection"
+mouse = "Middle"
+
+[selection]
+semantic_escape_chars = ",│`|:\"' ()[]{}<>"
+[font.bold]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy"
+
+[font.bold_italic]
+family = "JetBrainsMono Nerd Font"
+style = "Heavy Italic"
+
+[font.italic]
+family = "JetBrainsMono Nerd Font"
+style = "Medium Italic"
+
+[font.normal]
+family = "JetBrainsMono Nerd Font"
+style = "Medium"
