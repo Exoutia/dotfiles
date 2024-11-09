@@ -21,7 +21,6 @@ source "${ZINIT_HOME}/zinit.zsh"
 # my paths
 export PATH="/home/bibek/.local/bin:$PATH"
 export PATH="$PATH:$(go env GOBIN):$(go env GOPATH)/bin"
-export PATH="$HOME/.pyenv/bin:$PATH"
 export NNN_PLUG="f:finder;o:fzopen;p:preview-tui;d:diffs;t:preview-tab;v:imgview;m:nmount"
 export NNN_FIFO="/tmp/nnn.fifo"
 export NNN_BMS="d:$HOME/Downloads;p:$HOME/Projects;s:$HOME/Pictures/Screenshots;b:$HOME/Downloads/books;m:$HOME/Music;v:$HOME/Videos;"
@@ -153,8 +152,6 @@ autoload -Uz compinit && compinit
 
 # Shell integrations
 eval "$(fzf --zsh)"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
 eval "$(starship init zsh)"
 
 # pnpm
