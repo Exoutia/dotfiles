@@ -107,6 +107,7 @@ alias lst='eza -1 --icons -sold'
 alias lsta='eza -1 --icons -sold -a'
 alias la='eza -a'
 alias lt='eza --icons=auto --tree' # list folder as tree
+
 # alias in="$aurhelper -S"
 alias un='$aurhelper -Rns' # uninstall package
 alias up='$aurhelper -Syu' # update system/package/aur
@@ -115,6 +116,7 @@ alias pa='$aurhelper -Ss' # list availabe package
 alias pc='$aurhelper -Sc' # remove unused cache
 alias po='$aurhelper -Qtdq | $aurhelper -Rns -' # remove unused packages, also try > $aurhelper -Qqd | $aurhelper -Rsu --print -
 alias vc='code' # gui code editor
+
 # Handy change dir shortcuts
 alias ..='cd ..'
 alias ...='cd ../..'
@@ -135,7 +137,10 @@ alias my-nvimh="NVIM_APPNAME=myNvim neovide"
 alias onvim="cd ~/myNotes && nvim"
 
 # for playing music 
-alias mpv_play='mpv ~/Music/music --no-video --shuffle'
+alias mpv_play='mpv ~/Music/spotube/ --no-video --shuffle'
+
+# for studying microservice
+alias mpv_micro='mpv --save-position-on-quit --resume-playback ~/Videos/microservice/Master\ Microservices\ \&\ Event-Driven\ Architecture：\ Complete\ 6-Hour\ Guide\ for\ Beginners\ to\ Advanced\ \[FDjmWxETjn8\].webm'
 
 
 alias nnn='nnn -e'
@@ -164,3 +169,10 @@ esac
 
 eval "$(uv generate-shell-completion zsh)"
 eval "$(uvx --generate-shell-completion zsh)"
+. "/home/bibek/.deno/env"
+
+
+# gitignore file generationg function
+function gi() { curl -sLw "\n" https://www.toptal.com/developers/gitignore/api/$@ ;}
+# use 
+# gi linux, python, django > .gitignore

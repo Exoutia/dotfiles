@@ -8,7 +8,11 @@ duration = 0
 
 [terminal.shell]
 program = '/usr/bin/zsh'
-args = ['-l', '-c', 'tmux attach || tmux']
+args = ['-l', '-c', 'zellij attach || zellij']
+
+[colors.cursor]
+text = "CellBackground"
+
 
 [window]
 decorations = "full"
@@ -16,12 +20,12 @@ dynamic_padding = false
 opacity = 1
 
 [window.padding]
-x = 10
-y = 0
+x = 5
+y = 5
 
 
 [font]
-size = 13.0
+size = 14.0
 
 [mouse]
 hide_when_typing = true
@@ -35,7 +39,14 @@ semantic_escape_chars = ",│`|:\"' ()[]{}<>"
 
 [general]
 live_config_reload = true
-import = ["~/.config/alacritty/themes/themes/catppuccin_mocha.toml"]
+import = ["~/.config/alacritty/themes/themes/everblush.toml"]
+
+[cursor.style]
+shape = "Beam"
+blinking = "On"
+
+[cursor.vi_mode_style]
+shape = "Block"
 
 [terminal]
 [font.bold]
